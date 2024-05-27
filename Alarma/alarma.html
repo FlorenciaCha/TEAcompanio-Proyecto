@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./alarma.css">
+    <link rel="stylesheet" href="../barraNavegacion/nav.css">
+    <title>Alarma</title>
+</head>
+<body>
+    <header>
+        <!--   <h2 class="logo">TEAcompaño</h2>
+          <input type="checkbox" id="check"> -->
+          <div class="logo">
+              <!--  <img src="./faviconCorazonTEA.ico" alt="Logo de la marca"> -->
+              <a href="../index.html" class= "flecha-izquierda">
+                   <i class="fa-solid fa-arrow-left" style="color: #f2f2f2;"></i>
+               </a>
+               <h2>Alarma</h2>
+           </div>
+          
+           <input type="checkbox" id="check"> 
+          <label for="check" class="mostrar-menu">
+              &#8801
+          </label>
+          <nav class="menu">
+            <a href="../index.html">Inicio</a>
+            <a href="../TodosJuegos/todosJuegos.html">Juegos</a>
+            <a href="../Pictogramas/pictogramas.html">Pictogramas</a>
+            <a href="../calendario/calendario.html.html">Calendario</a>
+            <a href="#">Historias Sociales</a>
+            <a href="../Alarma/alarma.html">Alarma</a>
+            <a href="../Calculadora/calculadora.html">Calculadora</a>
+              <label for="check" class="esconder-menu">&#215</label>
+          </nav>
+      </header>
+    <div class="container">
+        <div class="wrapper">
+            <img src="../static/img/despertador.png" alt="">
+            <h1>00:00:00 PM</h1>
+            <div class="content">
+                <div class="column">
+                    <select>
+                        <option value="Hour" selected hidden>Hora</option>
+                        
+                    </select>
+                </div>
+                <div class="column">
+                    <select>
+                        <option value="Minute" selected hidden>Minutos</option>
+                   
+                    </select>
+                </div>
+                <div class="column">
+                    <select>
+                        <option value="AM/PM" selected hidden>AM</option>
+                    </select>
+                </div>
+            </div>
+            <button>Establecer Alarma</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
