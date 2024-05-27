@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaldi&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Jaldi', sans-serif; 
+}
+
+
+h1{
+    color: #3F4DE5;
+    text-align: center;
+}
+
+
+/*BANNER*/
+/* #banner{
+    padding: 0 10px;
+    background-image: url('../static/img/coverTea.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(176, 209, 211, 0.5);  
+}
+
+.contenido-banner{
+    position: relative;
+    color: #f2f2f2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.contenido-banner h1{
+    padding: 10px 0px;
+    font-size: 2rem;
+    line-height: 1.2;
+    color:#3F4DE5;
+}
+
+.contenido-banner h1 span{
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color:#3F4DE5;
+ 
+}
+
+.boton-registrarse{
+    display: inline-block;
+    background-color: #3F4DE5;
+    padding:10px 20px;
+    border-radius: 5px;
+    color: #f2f2f2;
+    font-size: 1em;
+    text-decoration: none;
+    transform: background-color 0.3s ease;
+    align-self: center;
+}
+
+
+.boton-registrarse:hover{
+    background-color: #3F4DE5;
+    color:  #c0d0e4;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(1.1);
+    }100%{
+        transform: scale(1);
+    }
+}
+
+.boton-registrarse:hover{
+    animation: pulse 0.5s infinite alternate;
+} */
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    animation: banner 15s infinite linear alternate;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @keyframes banner {
+    0%, 20%{
+      background-image: url('../static/img/coverTea.png');
+    }
+  
+    25%, 45%{
+      background-image: url('../static/img/2.png');
+    }
+    50%, 70%{
+      background-image: url('../static/img/4.png');
+    }
+    75%, 100%{
+      background-image: url('../static/img/5.png');
+    }
+  }
+  
+  .capa{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 0 0 2000px rgba(198, 218, 219, 0.5);  
+   
+  }
+  
+  .titulo{
+    /*width: 100%;*/
+    max-width: 90rem;
+    text-align: center;
+    padding: 8rem 0;
+    margin: 0 auto;
+    z-index: 1;
+    font-family: 'Jaldi', sans-serif; 
+  }
+  
+  .titulo h1{
+    color: #3F4DE5;
+    font-size: 60px;
+    /* margin-bottom: 5px; */
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0 auto;
+  }
+
+  .titulo h2{
+    color: #3F4DE5;
+    font-size: 30px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 3rem 0;
+    margin: 0 auto;
+  }
+  
+  .titulo a{
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #3F4DE5;
+    padding:10px 20px;
+    border-radius: 5px;
+    color: #f2f2f2;
+    font-size: 1em;
+    text-decoration: none;
+    transform: background-color 0.3s ease;
+    align-self: center;
+  }
+  
+
+  .titulo a:hover{
+    background-color: #3F4DE5;
+    color:  #c0d0e4;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(1.1);
+    }100%{
+        transform: scale(1);
+    }
+}
+
+.titulo a:hover{
+    animation: pulse 0.5s infinite alternate;
+} 
+.galeria{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 10px;
+}
+
+.picto-card{
+    background: #f2f2f2;
+    margin: 30px 10px;
+    border-radius: 10px;
+    border: 1px solid #f2f2f2;
+}
+
+
+.picto-card img{
+   width: 100%;
+   height: 250px;
+   /*object-fit: cover;*/
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+}
+
+
+.picto-card a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #3F4DE5;
+    color: #f2f2f2;
+    padding: 15px 0;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+.btn:hover{
+    background-color: #c0d0e4;
+    color: #3F4DE5;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(1.1);
+    }100%{
+        transform: scale(1);
+    }
+}
+
+.btn:hover{
+    animation: pulse 0.5s infinite alternate;
+}
+
+.footer{
+    background-color: #3F4DE5;
+    padding: 30px 0;
+}
+
+/*RESPONSIVE*/
+@media(max-width: 768px){
+    /*HEADER*/
+   /*  .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #3F4DE5;
+        right: -100%;
+        top:0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+        
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~.menu{
+        right: 0;
+    } */
+
+    /*OPCIONES*/
+    .opciones{
+        flex-direction: column;
+    }
+
+    .opciones div{
+        flex: 1 0 45%; /* Cambiar flex para permitir que los elementos se ajusten en dos filas */
+        max-width: 45%; /* Limitar el ancho máximo de cada div para mantener el diseño */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+   
+    .banner{
+        background-size: cover;
+    }
+
+    @keyframes banner {
+        0%, 20%{
+          background-image: url('../static/img/10.png');
+        }
+      
+        25%, 45%{
+          background-image: url('../static/img/6.png');
+        }
+        50%, 70%{
+          background-image: url('../static/img/11.png');
+        }
+        75%, 100%{
+          background-image: url('../static/img/10.png');
+        }
+      }
+    
+    .titulo {
+      padding: 6rem 0;
+    }
+    
+    .titulo h1 {
+      font-size: 40px;
+      padding: 4rem 0;
+    }
+    
+    .titulo a {
+      font-size: 20px;
+      padding: 6px 15px;
+    }
+    .contenido-banner {
+          font-size: 24px;
+    }
+
+}
+
+
