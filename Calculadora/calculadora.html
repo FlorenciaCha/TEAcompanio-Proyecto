@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./faviconCorazonTEA.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./calculadora.css">
+    <link rel="stylesheet" href="../barraNavegacion/nav.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <header>
+        <!--   <h2 class="logo">TEAcompaño</h2>
+          <input type="checkbox" id="check"> -->
+          <div class="logo">
+              <!--  <img src="./faviconCorazonTEA.ico" alt="Logo de la marca"> -->
+              <a href="../index.html" class= "flecha-izquierda">
+                   <i class="fa-solid fa-arrow-left" style="color: #f2f2f2;"></i>
+               </a>
+               <h2>Calculadora</h2>
+           </div>
+          
+           <input type="checkbox" id="check"> 
+          <label for="check" class="mostrar-menu">
+              &#8801
+          </label>
+          <nav class="menu">
+            <a href="../index.html">Inicio</a>
+            <a href="../TodosJuegos/todosJuegos.html">Juegos</a>
+            <a href="../Pictogramas/pictogramas.html">Pictogramas</a>
+            <a href="../calendario/calendario.html.html">Calendario</a>
+            <a href="#">Historias Sociales</a>
+            <a href="../Alarma/alarma.html">Alarma</a>
+            <a href="../Calculadora/calculadora.html">Calculadora</a>
+              <label for="check" class="esconder-menu">&#215</label>
+          </nav>
+      </header>
+    <div class="container">
+        <div class="calculadora">
+            <div class="pantalla">0</div>
+            <button id="c" class="btn">C</button>
+            <button id="borrar" class="btn">&larr;</button>
+            <button class="btn">/</button>
+            <button class="btn">*</button>
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn">-</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn">+</button>
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button id="igual" class="btn">=</button>
+            <button id="cero" class="btn">0</button>
+            <button class="btn">.</button>
+        </div>
+    </div>
+    
+
+    <script src="./calculadora.js"></script>
+</body>
+</html>
