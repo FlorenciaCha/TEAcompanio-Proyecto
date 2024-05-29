@@ -63,8 +63,8 @@
         <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)" ontouchstart="drop(event)" ontouchmove="allowDrop(event)"></div>
     </div>
 
-    <button class="reset" onclick="window.location.reload();">Volver a empezar </button>
-    
+  
+    <button id="nuevoJuego">Volver a Empezar</button>
     <script>
 
         function drag(event){
@@ -109,6 +109,17 @@
                 drop(e);
             }
         });
+
+         document.getElementById('nuevoJuego').addEventListener('click', function() {
+        // Recargar la página
+        location.reload();
+        });
+
+        document.getElementById('volver').addEventListener('click', function() {
+        // Volver a la página anterior
+        window.location.href = "../todosJuegos.html";
+        });
+
     </script>
 </body>
 </html>
