@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./faviconCorazonTEA.ico" type="image/x-icon">
+    <title>Juego de Arrastrar</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Arrastra donde corresponda</h1>
+    <div class="container">
+        <div class="figura">
+            <img src="./img/10.png"" alt="" draggable="true" ondragstart="drag(event)" id="remera">
+            <div class="box" id="0" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+            <h2>Vestido</h2>
+        </div>
+
+        <div class="figura">
+            <img src="./img/7.png"" alt="" draggable="true" ondragstart="drag(event)" id="campera">
+            <div class="box" id="1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+            <h2>Medias</h2>
+        </div>
+
+        <div class="figura">
+            <img src="./img/3.png"" alt="" draggable="true" ondragstart="drag(event)" id="medias">
+            <div class="box" id="2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+            <h2>Remera</h2>
+        </div>
+
+        <div class="figura">
+            <img src="./img/4.png"" alt="" draggable="true" ondragstart="drag(event)" id="vestido">
+            <div class="box" id="3" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+            <h2>Campera</h2>
+        </div>
+    </div>
+
+    <button onclick="resetGame()">Reiniciar Juego</button>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
