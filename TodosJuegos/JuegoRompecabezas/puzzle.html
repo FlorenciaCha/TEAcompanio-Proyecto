@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./faviconCorazonTEA.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./puzzle.css">
+  
+    <title>Juego de Rompecabezas</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="drag" id="drag">
+            <div class ="dragBox">
+                <div class="images" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)" id="block1" style="--img:url(./images/1.jpg)"></div>
+            </div>
+    
+            <div class ="dragBox">
+                <div class="images" draggable="true"  ondragstart="drag(event)" ontouchstart="drag(event)" id="block2" style="--img:url(./images/2.jpg)"></div>
+            </div>
+    
+            <div class ="dragBox">
+                <div class="images" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)" id="block3" style="--img:url(./images/3.jpg)"></div>
+            </div>
+    
+            <div class ="dragBox">
+                <div class="images" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)" id="block4" style="--img:url(./images/4.jpg)"></div>
+            </div>
+    
+            <div class ="dragBox">
+                <div class="images" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)" id="block5" style="--img:url(./images/5.jpg)"></div>
+            </div>
+    
+            <div class ="dragBox">
+                <div class="images" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)" id="block6" style="--img:url(./images/6.jpg)"></div>
+            </div>
+    
+            <div class ="dragBox">
+                <div class="images" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)" id="block7" style="--img:url(./images/7.jpg)"></div>
+            </div>
+    
+            <div class ="dragBox">
+                <div class="images" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)" id="block8" style="--img:url(./images/8.jpg)"></div>
+            </div>
+    
+            <div class ="dragBox">
+                <div class="images" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)" id="block9" style="--img:url(./images/9.jpg)"></div>
+            </div>
+    
+        </div>
+    </div>
+    
+
+    <div class ="board">
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)" ontouchstart="drop(event)" ontouchmove="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)" ontouchstart="drop(event)" ontouchmove="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)" ontouchstart="drop(event)" ontouchmove="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)" ontouchstart="drop(event)" ontouchmove="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)" ontouchstart="drop(event)" ontouchmove="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)" ontouchstart="drop(event)" ontouchmove="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)" ontouchstart="drop(event)" ontouchmove="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)" ontouchstart="drop(event)" ontouchmove="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)" ontouchstart="drop(event)" ontouchmove="allowDrop(event)"></div>
+    </div>
+
+    <button class="reset" onclick="window.location.reload();">Volver a empezar </button>
+    
+    <script>
+
+        function drag(event){
+            event.dataTransfer.setData("text",event.target.id)
+        }
+
+        function allowDrop(event){
+            event.preventDefault();
+        }
+
+        function drop(event)
+        {
+            event.preventDefault();
+            let data = event.dataTransfer.getData("text");
+            event.target.appendChild(document.getElementById(data));
+        }
+
+        onload = function()
+        {
+            let parent = document.getElementById('drag');
+            let frag = document.createDocumentFragment();
+            while(parent.children.length){
+                frag.appendChild(parent.children[Math.floor(Math.random()*parent.children.length)]);
+            }
+            parent.appendChild(frag);
+        }
+        // Agregar manejo de eventos táctiles
+        document.addEventListener('touchstart', function(e) {
+            if (e.target.classList.contains('images')) {
+                drag(e);
+            }
+        });
+
+        document.addEventListener('touchmove', function(e) {
+            if (e.target.classList.contains('dropBox')) {
+                allowDrop(e);
+            }
+        });
+
+        document.addEventListener('touchend', function(e) {
+            if (e.target.classList.contains('dropBox')) {
+                drop(e);
+            }
+        });
+    </script>
+</body>
+</html>
