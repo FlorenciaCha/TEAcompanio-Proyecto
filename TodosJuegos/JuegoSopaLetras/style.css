@@ -1,0 +1,198 @@
+body{
+  background-color: lightblue;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+
+}
+h1{
+  text-align: center;
+}
+
+p {
+  font: 22pt sans-serif;
+  margin: 20px 20px 0px 20px;
+}
+
+
+#contenedor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+/**
+* Styles for the puzzle
+*/
+#juego {
+  border: 1px solid #3F4DE5;
+  padding: 20px;
+  /*float: left;*/
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+/*#juego div {
+  width: 100%;
+  margin: 0 auto;
+}*/
+
+/* style for each square in the puzzle */
+#juego .puzzleSquare {
+  height: 60px;
+  width: 60px;
+  text-transform: uppercase;
+  background-color: white;
+  border: 0;
+  font: 1.5em sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/* indicates when a square has been selected */
+#juego .selected {
+  background-color: orange;
+}
+
+/* indicates that the square is part of a word that has been found */ 
+#juego .found {
+  background-color: blue;
+  color: #f2f2f2;
+  font-weight: bold;
+}
+
+#juego .solved {
+  background-color: rgb(89, 211, 89);
+  color: white;
+}
+
+/* indicates that all words have been found */
+#juego .complete {
+  background-color: lightgreen;
+}
+
+/**
+* Styles for the word list
+*/
+#Palabras {
+  /*padding-top: 20px;
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  column-count: 2;
+  column-gap: 20px;
+  width: 300px;
+  */
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#Palabras ul {
+  list-style-type: none;
+}
+
+#Palabras li {
+  padding: 3px 0;
+  font: 1em;
+  text-align: center; 
+}
+
+#botones{
+  margin-top: 20px;
+}
+
+/* indicates that the word has been found */
+#Palabras .wordFound {
+  text-decoration: line-through;
+  color: green;
+}
+
+/**
+* Styles for the button
+*/
+#solve, .reset {
+  margin: 20px auto;
+  border: none;
+  display: block;
+  background-color: #3F4DE5;
+  padding:10px 20px;
+  border-radius: 5px;
+  color: #f2f2f2;
+  font-size: 1em;
+  text-decoration: none;
+  transform: background-color 0.3s ease;
+  align-self: center;
+  cursor: pointer;
+}
+
+#solve:hover, .reset:hover{
+  background-color: #c0d0e4;
+  color: #3F4DE5;
+}
+
+@keyframes pulse{
+  0%{
+      transform: scale(1);
+  }50%{
+      transform: scale(1.1);
+  }100%{
+      transform: scale(1);
+  }
+}
+
+#solve:hover, .reset:hover{
+  animation: pulse 0.5s infinite alternate;
+}
+
+
+
+.reset:hover{
+  animation: pulse 0.5s infinite alternate;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #juego .puzzleSquare {
+    height: 40px;
+    width: 40px;
+    font-size: 1.2em;
+  }
+
+  #Palabras {
+    font-size: 1.5rem;
+  }
+
+  #solve, .reset {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  #juego .puzzleSquare {
+    height: 30px;
+    width: 30px;
+    font-size: 1em;
+  }
+
+  #Palabras {
+    font-size: 1.2rem;
+  }
+
+  #solve, .reset {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
+}

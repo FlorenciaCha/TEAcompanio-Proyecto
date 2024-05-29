@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sopa de letras</title>
+    <link rel="icon" href="./faviconCorazonTEA.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="wordfind.js"></script> 
+    <script type="text/javascript" src="wordfindgame.js"></script> 
+</head>
+<body>
+    <div id="contenedor">
+        <div id='juego'></div>
+        <div id='Palabras'></div>
+    </div>
+
+    
+    <div id = "botones">
+        <button id='solve'>Resolver el juego</button>
+        <button class="reset" onclick="window.location.reload();">Volver a empezar </button>
+    </div>
+    <script>
+        var words = ['Amarillo','Rosa','Violeta','Naranja','Rojo','Verde'];
+        var gamePuzzle = wordfindgame.create(words, '#juego', '#Palabras'); 
+        
+        var puzzle = wordfind.newPuzzle(words,{height: 18, width:18, fillBlanks: false});
+        wordfind.print(puzzle);   
+        
+        $('#solve').click( function() {wordfindgame.solve(gamePuzzle, words);});
+        
+    </script>
+    
+</body>
+</html>
