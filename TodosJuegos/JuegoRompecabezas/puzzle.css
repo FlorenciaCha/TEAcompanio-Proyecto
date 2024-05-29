@@ -118,6 +118,7 @@ body{
 
     .board {
         gap: 3px;
+        margin-left: 2px;
     }
 
     .dropBox {
@@ -147,6 +148,7 @@ body{
 
     .board {
         gap: 2px;
+        margin-left: 2px;
     }
 
     .dropBox {
