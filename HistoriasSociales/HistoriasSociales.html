@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./HistoriasSociales.css">
+    <link rel="stylesheet" href="../barraNavegacion/nav.css">
+    <title>Historias Sociales</title>
+</head>
+<body>
+    <style>
+        .video-contaiener .video video:hover{
+            transition: .2s linear;
+            transform: scale(1.2);
+        }
+
+        /* .video-contaiener .video .active{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: auto;
+            width: 80%;
+            box-shadow: 0 0 0 100vh rgba(0,0,0,.7);
+            z-index: 1;
+        }
+
+        .video-contaiener .video .active:hover{
+            transition: none;
+            transform: translate(-50%, -50%) scale(1);
+        } */
+
+
+          /* Media query for mobile devices */
+          @media (max-width: 768px) {
+            .video-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .video-container .video {
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .container .heading {
+                font-size: 2rem;
+                margin: 1rem 0;
+            }
+
+            .footer {
+                padding: 20px 0;
+            }
+        }
+    </style>
+    <header>
+        <!--   <h2 class="logo">TEAcompaño</h2>
+          <input type="checkbox" id="check"> -->
+          <div class="logo">
+              <!--  <img src="./faviconCorazonTEA.ico" alt="Logo de la marca"> -->
+              <a href="../index.html" class= "flecha-izquierda">
+                   <i class="fa-solid fa-arrow-left" style="color: #f2f2f2;"></i>
+               </a>
+               <h2>Historias Sociales</h2>
+           </div>
+          
+           <input type="checkbox" id="check"> 
+          <label for="check" class="mostrar-menu">
+              &#8801
+          </label>
+          <nav class="menu">
+            <a href="../index.html">Inicio</a>
+            <a href="../TodosJuegos/todosJuegos.html">Juegos</a>
+            <a href="../Pictogramas/pictogramas.html">Pictogramas</a>
+            <a href="../calendario/calendario.html.html">Calendario</a>
+            <a href="../HistoriasSociales/HistoriasSociales.html">Historias Sociales</a>
+            <a href="../Alarma/alarma.html">Alarma</a>
+            <a href="../Calculadora/calculadora.html">Calculadora</a>
+              <label for="check" class="esconder-menu">&#215</label>
+          </nav>
+      </header>
+
+    <div class="container">
+        <div class="heading">Historia Sociales</div>
+        <div class="video-contaiener" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+           
+            <div class="video">
+                <h2 class="name">¿Cómo hablar con amigos?</h2>
+                <video src="./videos/saludo.mp4" controls poster="./videos/1.png" width="400" height="300" style="border-radius: 1rem;"></video>
+            </div>
+           
+
+            <div class="video">
+                <h2 class="name">Fiesta de cumpleaños</h2>
+                <video src="./videos/cumpleaños.mp4" controls poster="./videos/2.png" width="400" height="300" style="border-radius: 1rem;"></video>
+            </div>
+
+            <div class="video">
+                <h2 class="name">Respetando a los demás</h2>
+                <video src="./videos/respetar.mp4" controls poster="./videos/3.png" width="400" height="300" style="border-radius: 1rem;"></video>
+            </div>
+
+            <div class="video">
+                <h2 class="name">En la escuela</h2>
+                <video src="./videos/clase.mp4" controls poster="./videos/4.png" width="400" height="300" style="border-radius: 1rem;"></video>
+            </div>
+
+            <div class="video">
+                <h2 class="name">Respetando turnos</h2>
+                <video src="./videos/turnos.mp4" controls poster="./videos/5.png" width="400" height="300" style="border-radius: 1rem;"></video>
+            </div>
+
+            <div class="video">
+                <h2 class="name">Jugar y compartir</h2>
+                <video src="./videos/compartir.mp4" controls poster="./videos/6.png" width="400" height="300" style="border-radius: 1rem;"></video>
+            </div>
+
+            <div class="video">
+                <h2 class="name">Cuando Jugamos</h2>
+                <video src="./videos/juegos.mp4" controls poster="./videos/7.png" width="400" height="300" style="border-radius: 1rem;"></video>
+            </div>
+
+            <div class="video">
+                <h2 class="name">Visitando al doctor</h2>
+                <video src="./videos/doctor.mp4" controls poster="./videos/8.png" width="400" height="300" style="border-radius: 1rem;"></video>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer class="footer"></footer>
+    <script>
+        var video = document.querySelectorAll('video')
+
+        video.forEach(play => play.addEventListener('click', () =>{
+            play.classList.toggle('active');
+
+            if(play.paused){
+                play.play();
+            }
+            else{
+                play.pause();
+                play.currentTime = 0;
+            }
+        }));
+    </script>
+</body>
+</html>
