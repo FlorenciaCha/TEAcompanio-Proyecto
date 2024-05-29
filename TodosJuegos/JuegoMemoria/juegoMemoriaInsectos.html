@@ -80,23 +80,33 @@
             background: linear-gradient(#3F4DE5, blue);
         }
 
-        .nuevo-Juego{
-            cursor: pointer;
+        #nuevoJuego, #siguiente, #volver{
+   
+            align-items: center;
+            justify-content: center;
             background-color: #3F4DE5;
-            padding: 10px 30px;
-            border-radius: 10px;
-            font-size: 130%;
             color: #f2f2f2;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 1rem;
+            margin: 0 0.5rem;
+            cursor: pointer;
         }
 
-        a{
-            cursor: pointer;
-            background-color: #3F4DE5;
-            padding: 10px 30px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 120%;
-            color: #f2f2f2;
+        #nuevoJuego:hover{
+            background-color: #c0d0e4;
+            color: #3F4DE5;
+        }
+
+        #siguiente:hover{
+            background-color: #c0d0e4;
+            color: #3F4DE5;
+        }
+
+        #volver:hover{
+            background-color: #c0d0e4;
+            color: #3F4DE5;
         }
 
         img{
@@ -121,13 +131,15 @@
     <div id="tablero"></div> 
     <br>
 
-
-    <div class="nuevo-Juego" onclick="generarTablero()">Nuevo Juego</div>
     <br>
-    <a href="./juegoMemoriaAnimales.html" class="nuevo-Juego">Siguiente</a>
-
     <br>
-    <a href="./juegoMemNiveles.html">Volver</a>
+    <br>
+    <div class="button-container">
+        <button id="nuevoJuego">Nuevo juego</button>
+        <button id="siguiente">Siguiente</button>
+        <button id="volver">Volver</button>
+    </div>
+    
     
      
 
@@ -207,6 +219,16 @@
                 }
             }, 1000);
         }
+
+     document.getElementById('volver').addEventListener('click', function() {
+    // Volver a la página anterior
+    window.location.href = "./juegoMemNiveles.html";
+    });
+
+    document.getElementById('siguiente').addEventListener('click', function() {
+    // Volver a la página anterior
+  window.location.href = "./juegoMemoriaAnimales.html";
+    });
 
 </script>
 
