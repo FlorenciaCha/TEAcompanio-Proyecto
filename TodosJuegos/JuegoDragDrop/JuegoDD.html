@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de correspondencia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
+    <link rel="stylesheet" href="./JuegoDD.css">
+</head>
+<body>
+    
+
+    <section class="draggable-elements">
+        <i class="fa-solid fa-palette draggable" draggable="true" style="color: #f72a56;" id="rojo"></i>
+        <i class="fa-solid fa-palette draggable" draggable="true" style="color: #0f1deb;" id="azul"></i>
+        <i class="fa-solid fa-palette draggable" draggable="true" style="color: #ffce56;" id="amarillo"></i>
+        <i class="fa-solid fa-palette draggable" draggable="true" style="color: #9966ff;" id="violeta"></i>
+        <i class="fa-solid fa-palette draggable" draggable="true" style="color: #46f040;" id="verde"></i>
+    </section>
+
+    <section class="doppable-elements">
+        <div class="droppable" data-draggable-id="verde"><span>Verde</span></div>
+        <div class="droppable" data-draggable-id="amarillo"><span>Amarillo</span></div>
+        <div class="droppable" data-draggable-id="rojo"><span>Rojo</span></div>
+        <div class="droppable" data-draggable-id="azul"><span>Azul</span></div>
+        <div class="droppable" data-draggable-id="violeta"><span>Violeta</span></div>
+
+    </section>
+
+    <div class="button-container">
+        <button id="nuevoJuego">Nuevo juego</button>
+        <button id="siguiente">Siguiente</button>
+        <button id="volver">Volver</button>
+    </div>
+
+    <br>
+    <br>
+    <script src="./JuegoDD.js"></script>
+</body>
+</html>
