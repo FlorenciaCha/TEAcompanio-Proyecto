@@ -29,6 +29,12 @@ body {
 .draggable:hover {
     opacity: 0.5;
 }
+
+.doppable-elements{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .droppable {
     height: 6.5rem;
     width: 6.5rem;
