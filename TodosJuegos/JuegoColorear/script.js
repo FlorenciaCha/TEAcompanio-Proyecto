@@ -122,3 +122,15 @@ window.onload = () => {
   initialY = container.clientHeight / svgHeight;
   circles = [];
 };
+
+
+document.getElementById('nuevoJuego').addEventListener('click', function() {
+  // Recargar la página
+  location.reload();
+});
+
+document.getElementById('volver').addEventListener('click', function() {
+  // Volver a la página anterior
+  window.location.href = "../todosJuegos.html";
+});
+
