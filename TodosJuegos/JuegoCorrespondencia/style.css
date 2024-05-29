@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: lightblue;
+}
+.container {
+  width: 90%;
+  max-width: 37.5em;
+  background-color: #ffffff;
+  padding: 3em 0.5em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 0.8em;
+}
+h3 {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto 2em auto;
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.8em;
+  color: #010c39;
+}
+.draggable-objects,
+.drop-points {
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+}
+.draggable-image {
+  width: 8em;
+  cursor: move;
+}
+img {
+  width: 8em;
+  filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
+}
+.countries {
+  width: 10em;
+  height: 8em;
+  display: grid;
+  place-items: center;
+  border: 0.25em dashed #3F4DE5;
+  border-radius: 0.8em;
+}
+.dropped {
+  padding: 0;
+  background-color: #e5ffc8;
+}
+.controls-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: lightblue;
+  flex-direction: column;
+  top: 0;
+}
+.controls-container button {
+  font-size: 1.12em;
+  padding: 0.8em 1em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #f2f2f2;
+  background-color: #3F4DE5;
+  cursor: pointer;
+}
+
+#volver{
+  font-size: 1.12em;
+  padding: 0.8em 1em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #f2f2f2;
+  background-color: #3F4DE5;
+  cursor: pointer;
+}
+.controls-container p {
+  color: #f2f2f2;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+
+#result-image {
+  width: 100px; /* Ajusta el tamaño según tus necesidades */
+  height: auto;
+  margin-top: 1em;
+}
+.hide {
+  display: none;
+}
+
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 2em 0.5em;
+  }
+
+  h3 {
+    width: 90%;
+    font-size: 1em;
+  }
+
+  .draggable-objects,
+  .drop-points {
+    padding: 1em;
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 30px;
+  }
+
+  .draggable-image,
+  img {
+    width: 6em;
+  }
+
+  .countries {
+    width: 8em;
+    height: 6em;
+  }
+
+  .controls-container button {
+    font-size: 1em;
+    padding: 0.6em 0.8em;
+  }
+
+  .controls-container p {
+    font-size: 1.5em;
+  }
+}
