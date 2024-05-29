@@ -99,7 +99,7 @@ body{
 /* Media Queries */
 @media (max-width: 768px) {
     body {
-        gap: 10px;
+        gap: 5px;
     }
 
     .drag {
@@ -132,7 +132,7 @@ body{
 
 @media (max-width: 480px) {
     body {
-        gap: 10px;
+        gap: 5px;
     }
 
     .drag {
