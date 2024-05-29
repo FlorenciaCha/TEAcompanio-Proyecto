@@ -122,22 +122,27 @@ label{
     align-items: center;
   }
 
-
-
-.btn{
-  display: inline-block; 
-  text-align: center;
-  margin-top: 1em; 
-  cursor: pointer;
-  background-color: #3F4DE5;
-  padding: 10px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 110%;
-  color: #f2f2f2;
-  align-items: center; /* Centra horizontalmente */
+ .button-container {
+  margin-top: 2rem;
+  display: flex;
   justify-content: center;
+  width: 100%;
 }
+#nuevoJuego, #volver{
+ 
+  align-items: center;
+  justify-content: center;
+  background-color: #3F4DE5;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+
 
 
 
