@@ -84,7 +84,7 @@ function selectCell(rowIndex, colIndex, cellElement) {
 
     if (words.includes(selectedWord) && !wordsFound.includes(selectedWord)) {
         wordsFound.push(selectedWord);
-        alert(`¡Has encontrado la palabra "${selectedWord}"!`);
+        //alert(`¡Has encontrado la palabra "${selectedWord}"!`);
         currentSelection.forEach(idx => {
             document.querySelector(`[data-index="${idx}"]`).classList.add('found');
         });
@@ -94,7 +94,7 @@ function selectCell(rowIndex, colIndex, cellElement) {
 
         if (wordsFound.length === words.length) {
             setTimeout(() => {
-                alert('¡Has ganado!');
+                //alert('¡Has ganado!');
                 startNewGame();
             }, 1000);
         }
